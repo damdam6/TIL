@@ -34,7 +34,7 @@ public class Mine_05_3 {
 	public static void xy_edit(int to_x, int to_y) {
 		
 		if(Rock[m_now[0]+to_x][m_now[1]+to_y] !=0 ) {
-			Rock[m_now[0]+to_x][m_now[1]+to_y] = Rock[m_now[0]+to_x][m_now[1]+to_y]-1;
+			Rock[m_now[0]+to_x][m_now[1]+to_y] -=1;
 
 			
 			if(Rock[m_now[0]+to_x][m_now[1]+to_y] ==0) {
@@ -136,7 +136,6 @@ public class Mine_05_3 {
 		
 		System.out.println("-----");
 		
-		Rock[m_now[0]][m_now[1]] = 7;
 		for(int[] k:Rock) {
 			System.out.println(Arrays.toString(k));
 		}
