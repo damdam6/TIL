@@ -8,6 +8,7 @@
 
 ### static
 
+
 ```java
 //Person 클래스 선언
 package jvm;
