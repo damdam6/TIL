@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+package Day05.daily.step4;
+>>>>>>> 9a1f1bca099c13c6f0a666380ce9954a025b72b0
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -59,6 +63,7 @@ public class RestaurantTest {
 		}
 
 		System.out.println("맛집 정보 삭제 맛집2");
+<<<<<<< HEAD
 		
 
 		RM.removeRestaurant(R2);
@@ -71,6 +76,18 @@ public class RestaurantTest {
 		
 
 		System.out.println("맛집id로 맛집 리뷰 반환 10,11,12----");
+=======
+		RM.removeRestaurant(R2);
+		for (int i = 0; i < RM.getRestaurantList().length; i++) {
+			if (RM.getRestaurantList()[i] != null) {
+				System.out.println(RM.getRestaurantList()[i].getResid() + "||" + RM.getRestaurantList()[i].getName()
+						+ "||" + RM.getRestaurantList()[i].getSignatureMenu());
+			}
+
+		}
+
+		System.out.println("맛집id로 맛집 정보 반환 10,11,12----");
+>>>>>>> 9a1f1bca099c13c6f0a666380ce9954a025b72b0
 		Scanner sc = new Scanner(System.in);
 
 		int n = sc.nextInt();
@@ -78,7 +95,12 @@ public class RestaurantTest {
 
 		for (int i = 0; i < Rev_r.length; i++) {
 			if (Rev_r[i] != null) {
+<<<<<<< HEAD
 				System.out.println(Rev_r[i].toString());
+=======
+				System.out.println("[" + Rev_r[i].getResid() + "||" + Rev_r[i].getReviewid() + "||"
+						+ Rev_r[i].getWriter() + "||" + Rev_r[i].getContent() + "]");
+>>>>>>> 9a1f1bca099c13c6f0a666380ce9954a025b72b0
 			}
 
 		}
@@ -98,7 +120,12 @@ public class RestaurantTest {
 
 		for (int i = 0; i < Rev_r.length; i++) {
 			if (Rev_r[i] != null) {
+<<<<<<< HEAD
 				System.out.println(Rev_r[i].toString());
+=======
+				System.out.println("[" + Rev_r[i].getResid() + "||" + Rev_r[i].getReviewid() + "||"
+						+ Rev_r[i].getWriter() + "||" + Rev_r[i].getContent() + "]");
+>>>>>>> 9a1f1bca099c13c6f0a666380ce9954a025b72b0
 			}
 
 		}

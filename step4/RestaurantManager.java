@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import java.util.Arrays;
+=======
+package Day05.daily.step4;
+>>>>>>> 9a1f1bca099c13c6f0a666380ce9954a025b72b0
 
 public class RestaurantManager {
 
@@ -51,12 +55,17 @@ public class RestaurantManager {
 		Boolean TF = false;
 		for (int i = 0; i < MAX_RESTAURANT_SIZE; i++) {
 			if (Res[i].getResid() == R.getResid()) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9a1f1bca099c13c6f0a666380ce9954a025b72b0
 				Res[i] = null;
 				rscnt--;
 				TF = true;
 				break;
 			}
 		}
+<<<<<<< HEAD
 		
 		int k = 0;
 		for(int i = 0; i <MAX_RESTAURANT_SIZE; i++) {
@@ -72,6 +81,8 @@ public class RestaurantManager {
 
 		}
 		
+=======
+>>>>>>> 9a1f1bca099c13c6f0a666380ce9954a025b72b0
 		return TF;
 	}
 
@@ -114,6 +125,7 @@ public class RestaurantManager {
 			}
 		}
 		
+<<<<<<< HEAD
 		
 		int k = 0;
 		for(int i = 0; i <MAX_REVIEW_SIZE; i++) {
@@ -129,6 +141,8 @@ public class RestaurantManager {
 		}
 		
 		
+=======
+>>>>>>> 9a1f1bca099c13c6f0a666380ce9954a025b72b0
 		return TF;
 	}
 
