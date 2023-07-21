@@ -2,8 +2,9 @@
 
 날짜: 2023/07/21
 태그: study
-세부항목: JAVA문법, SSAFY
+세부항목: JAVA문법
 velog/blog/git: git
+
 
 # Inheritance 상속
 
