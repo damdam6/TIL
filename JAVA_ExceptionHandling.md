@@ -1,8 +1,6 @@
 # JAVA  Exception Handling
 
 날짜: 2023/07/27
-태그: study
-세부항목: JAVA문법, SSAFY
 
 # Error의 종류
 
