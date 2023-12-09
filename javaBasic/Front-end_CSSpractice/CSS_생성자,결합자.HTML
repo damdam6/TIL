@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+
+        /* 선택자 우선 순위 소개 */
+        div{
+            color:white;
+            background-color:cadetblue;
+        }
+
+        .detail{
+            color:black;
+        }
+
+        .order{ 
+           background-color: black;  
+        }
+
+        .order{
+            background-color: brown;
+        }
+
+        .imp{
+             color: pink !important;
+            }
+        .imp{
+            color: skyblue;
+        }
+
+
+        /* 기본 선택자 소개 */
+
+        *{
+            color: burlywood;
+        }
+
+        h5{
+            color:chocolate;
+        }
+
+        #id{
+            background-color: cornflowerblue;
+        }
+
+        /* 선택자 응용 버전 */
+        .multi, h6{
+            color: chartreuse;
+        }
+
+        .parent-one #child-one, .parent-one .child-two,.parent-one #child-child{
+            color:gold;
+        }
+
+        #parent-two > .child-direct{
+            background-color: olive;
+        }
+
+        .sibling-gen .big-bro ~ .little-bro{
+            background-color:lightblue
+        }
+        .sibling-adj .big-bro + .little-bro{
+            background-color: darkmagenta;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- CSS 선택자 공부하기 -->
+    
+
+    <!-- 선택자 우선 순위-->
+    <h1> [선택자 우선 순위] </h1>
+    <div>🔰 div{ color:white; background-color:cadetblue; } <br>기본 설정을 반영합니다.</div>
+    <br>
+    <div class="detail"> 🔰 .detail{ color:black; } 
+        <br> 동일한 유형이라도 구체적인 설정을 반영합니다.</div>
+    <br>
+    <div class="order"> 🔰 .order{  background-color: black;  } <br> 🔰 .order{ background-color: brown; } <br>
+        동일한 유형이라면 마지막 설정이 적용됩니다.</div>
+    <br>
+    <div class="imp"> 🔰 .imp{ color: pink !important; } <br>🔰 .imp{  color: skyblue;  }  <br>  !imporant를 통해 중요한 디자인을 우선 설정합니다. </div>
+    <br>
+
+    <!-- 기본 선택자 종류 -->
+    <h1> [ 기본 선택자 설정 ] </h1>
+
+    <span>🔰 *{ color: burlywood; } <br> 전체 선택자로 HTML 문서의 모든 element를 선택합니다.</span>
+    <h5>🔰 h5{  color:chocolate;   } <br>유형 선택자는 태그명을 이용하여 스타일을 적용할 태그를 선택합니다.</h5>
+    <div class="detail"> 🔰 .detail{ color:black; }
+        <br> 클래스 선택자는 클래스가 적용된 모든 태그를 선택합니다.</div>
+    <br>
+    <div id="id"> 🔰 #id{ background-color: cornflowerblue; } 
+        <br> id 선택자는 하나만 존재해야 합니다.    </div>
+    <br>
+    
+    <!-- 선택자 응용 버전 -->
+    <h1> [선택자 응용 & 결합자] </h1>
+
+    <div class="multi"> 🔰 .multi, h6{ color: chartreuse;} 
+        <br> [class="multi"] 선택자 목록은 여러 선택자를 동시에 선택하도록 한다.</div>
+    <div><h6> [h6] h6 유형 선택자, multi 클래스 선택자 동시에 사용 가능!</h6></div>
+
+    <div class="parent-one"> 🔰 .parent-one .child-one,<br>  .parent-one #child-two,<br>  .parent-one #child-child{color:gold;}
+        <br>
+        <div id="child-one">[id="child-one"] 자손 결합자를 통해 자식 노드 선택 가능</div>
+        <div class="child-two">[class="child-two"] 자식이 여럿일 경우 ','로 중복 사용 가능 </div>
+        <div id="child-three">
+            <div id="child-child">[id="child-child"] 직속 상속이 아니더라도 사용가능 parent-> child-> child-child </div>
+            </div>
+    </div>
+
+    <br>
+    <div id="parent-two"> 🔰 #parent-two > .child-direct{   background-color: olive; } 
+        <div class = "child-direct">
+            [class = "child-direct"] 자식 결합자는 바로 아래 자식인 노드를 선택합니다.
+        </div> 
+        <div> 
+            <div class="child-direct"> [ parent-two -> (div) -> child-direct] 자손 노드는 해당되지 않습니다.</div>
+        </div>
+    </div>
+    <br>
+
+    <div class="sibling-gen"> 🔰 .sibling-gen .big-bro ~ .little-bro{ background-color:lightblue }
+        <div class="little-bro">일반 형제 결합자는 부모를 공유하는 두 번재 요소를 모두 선택합니다.</div>
+        <div class="little-bro"> [little-bro] 단, 뒤따라 오는 요소에만 적용됩니다.</div>
+        <div class="big-bro"> [class=big-bro] 첫번째 요소</div>
+        <div class="little-bro"> [little-bro] 두번째 요소</div>
+        <div class="little-bro"> [little-bro] 두번째 요소</div>
+    </div >
+    <br>
+    <div class="sibling-adj"> 🔰 .sibling-adj .big-bro + .little-bro{ background-color: darkmagenta; }
+        <div class="little-bro">인접 형제 결합자는 부모를 공유하는 두 번째 요소를 하나 선택합니다.</div>
+        <div class="little-bro"> [little-bro] 단, 뒤따라 오는 요소에만 적용됩니다.</div>
+        <div class="big-bro"> [class=big-bro] 첫번째 요소</div>
+        <div class="little-bro"> [little-bro] 두번째 요소</div>
+        <div class="little-bro"> [little-bro] 두번째 요소</div>
+    </div >
+<br>
+<br>
+</body>
+</html>
